@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="bx-container">
+    <div class="ag-format-container">
+        <div class="ag-courses_box">
+        <div class="ag-courses_item">
+            <div class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+    
+            <div class="ag-courses-item_title">
+                AUDIO BOOK GENERTOR
+            </div>
+    
+            <div class="ag-courses-item_date-box">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="pdf">Select PDF file:</label>
+                    <input type="file" name="pdf" id="pdf" accept="application/pdf"><br><br>
+                    <input type="submit" value="Convert to Audiobook">
+                </form>
+            
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="bx-container">
+    <div class="ag-format-container">
+        <div class="ag-courses_box">
+        <div class="ag-courses_item">
+            <div class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+    
+            <div class="ag-courses-item_title">
+                TEXT TO SPEECH CONVERTER
+            </div>
+    
+            <div class="ag-courses-item_date-box">
+                <form action="/speak" method="post">
+                    <textarea name="text" rows="10" cols="30" placeholder="Enter text here..."></textarea><br><br>
+                    <input type="submit" value="Convert to Speech">
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

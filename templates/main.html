@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="bx-container">
+    <div class="ag-format-container">
+        <div class="ag-courses_box">
+        <div class="ag-courses_item">
+            <div class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+    
+            <div class="ag-courses-item_title">
+                BARCODE GENERATOR
+            </div>
+    
+            <div class="ag-courses-item_date-box">
+                <form action="/generate" method="post">
+                    <label for="barcode_text">Text for Barcode:</label>
+                    <input type="text" id="barcode_text" name="barcode_text" required>
+                    <br><br>
+                    <label for="barcode_type">Barcode Type:</label>
+                    <select id="barcode_type" name="barcode_type" required>
+                        <option value="Code128">Code 128</option>
+                        <option value="EAN13">EAN-13</option>
+                        <!-- Add more barcode types if needed -->
+                    </select>
+                    <br><br>
+                    <button type="submit">Generate Barcode</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
